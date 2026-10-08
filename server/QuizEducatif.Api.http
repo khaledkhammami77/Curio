@@ -1,0 +1,22 @@
+@QuizEducatif.Api_HostAddress = http://localhost:5050
+
+GET {{QuizEducatif.Api_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+GET {{QuizEducatif.Api_HostAddress}}/api/themes
+Accept: application/json
+
+###
+
+POST {{QuizEducatif.Api_HostAddress}}/api/sessions/start
+Content-Type: application/json
+
+{
+	"ageGroup": "6-12",
+	"themeIds": ["science", "astronomy"],
+	"numberOfQuestions": 3,
+	"saveSession": true,
+	"newQuestionsOnly": false
+}
